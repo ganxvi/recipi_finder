@@ -1,0 +1,121 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background: #c13308;
+  color: white;
+  padding: 20px;
+}
+
+.search-box {
+  margin: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #c13308;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c13308;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.recipe:hover {
+  transform: scale(1.05);
+}
+
+.recipe img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe h3 {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal-content h2 {
+  margin-top: 10px;
+}
+
+.modal-content ul {
+  text-align: left;
+  margin: 10px 0;
+}
+select {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

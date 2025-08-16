@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find My Food</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Find My Food</h1>
+    <p>Search by name, cuisine, or category</p>
+  </header>
+
+  <div class="search-box">
+    <!-- Search by name -->
+    <input type="text" id="searchInput" placeholder="Enter a recipe name...">
+    <button onclick="getRecipes()">Search</button>
+
+    <!-- Cuisine dropdown -->
+    <select id="cuisineSelect" onchange="getByCuisine()">
+      <option value="">-- Select Cuisine --</option>
+      <option value="Indian">Indian</option>
+      <option value="Chinese">Chinese</option>
+      <option value="American">American</option>
+      <option value="Italian">Italian</option>
+      <option value="Mexican">Mexican</option>
+      <option value="Japanese">Japanese</option>
+      <option value="Thai">Thai</option>
+      <option value="French">French</option>
+      <option value="British">British</option>
+    </select>
+
+    <!-- Category dropdown -->
+    <select id="categorySelect" onchange="getByCategory()">
+      <option value="">-- Select Category --</option>
+      <option value="Beef">Beef</option>
+      <option value="Chicken">Chicken</option>
+      <option value="Dessert">Dessert</option>
+      <option value="Lamb">Lamb</option>
+      <option value="Pasta">Pasta</option>
+      <option value="Seafood">Seafood</option>
+      <option value="Vegan">Vegan</option>
+      <option value="Vegetarian">Vegetarian</option>
+      <option value="Breakfast">Breakfast</option>
+    </select>
+  </div>
+<button onclick="loadDefaultRecipes()">Home</button>
+
+
+
+  <div class="recipes" id="recipeList"></div>
+
+  <!-- Modal -->
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">×</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
